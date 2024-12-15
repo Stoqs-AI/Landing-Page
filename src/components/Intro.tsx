@@ -2,7 +2,9 @@ import { motion } from "framer-motion";
 import Lottie from "lottie-react";
 import { ArrowRight } from "lucide-react";
 import React, { useEffect, useState } from "react";
-import LottieWrapper from "./LottieWrapper";
+import advancedAnimation from '../assets/lotties/advanced.json';
+import intermediateAnimation from '../assets/lotties/intermediate.json';
+import beginnerAnimation from '../assets/lotties/beginner.json';
 
 const FadeInAnimation = {
     hidden: { opacity: 0, y: 50 },
@@ -110,20 +112,20 @@ const Intro: React.FC = () => {
           </div>
           { mode == "Beginner" && (
             <div className='mt-3 lg:-mt-16 absolute right-0 bottom-0 md:bottom-1/2 md:translate-y-1/2 max-md:right-1/2 max-md:translate-x-1/2'>
-            <LottieWrapper loop={true} autoplay={true} animationData='/src/assets/lotties/beginner.json' style={{width: width > 1275 ? '100%' : width > 1024 ? '450px' : width > 770 ? '550px' : '450px'}} client:visible />
+            <Lottie animationData={beginnerAnimation} style={{width: width > 1275 ? '100%' : width > 1024 ? '450px' : width > 770 ? '550px' : '450px'}} />
           </div>
           )}
           {
             mode == "Intermediate" && (
               <div className='mt-3 lg:-mt-16 absolute right-0 bottom-0 md:bottom-1/2 md:translate-y-1/2 max-md:right-1/2 max-md:translate-x-1/2'>
-                <Lottie animationData='/src/assets/lotties/intermediate.json' style={{width: width > 1275 ? '100%' : width > 1024 ? '450px' : width > 770 ? '550px' : '450px'}} />
+                <Lottie animationData={intermediateAnimation} style={{width: width > 1275 ? '100%' : width > 1024 ? '450px' : width > 770 ? '550px' : '450px'}} />
               </div>
             )
           }
           {
             mode == "Advanced" && (
               <div className='mt-3 lg:-mt-16 absolute right-0 bottom-0 md:bottom-1/2 md:translate-y-1/2 max-md:right-1/2 max-md:translate-x-1/2'>
-                <Lottie animationData='/src/assets/lotties/advanced.json' style={{width: width > 1275 ? '100%' : width > 1024 ? '400px' : width > 770 ? '450px' : '350px'}} />
+                <Lottie animationData={advancedAnimation} style={{width: width > 1275 ? '100%' : width > 1024 ? '400px' : width > 770 ? '450px' : '350px'}} />
               </div>
             )
           }

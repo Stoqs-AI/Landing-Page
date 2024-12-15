@@ -5,10 +5,12 @@ import ThreadSection from '../components/ThreadSection';
 import DataInfo from '../components/DataGrid';
 import Working from '../components/Working';
 import Intro from '../components/Intro';
+import MainHome from '../components/MainHome';
 ---
 
 <Layout>
-	<Intro client:visible />
+	<MainHome client:load />
+	<Intro client:only="react" />
 	<DataInfo client:load />
 	<ThreadSection client:load />
 	<Working client:load />
