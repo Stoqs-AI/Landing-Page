@@ -6,6 +6,9 @@ import chartTwo from "../assets/635.png";
 import charts from "../assets/Landing-chartimg.png"
 import secure from "../assets/Landing-secure.png"
 import watchlist from "../assets/Landing-watchlist.png"
+import stoqs from "../assets/landing-candle.svg";
+import finchat from "../assets/landing-finchat.svg";
+import perplexity from "../assets/landing-perplexity.svg";
 
 const FadeInAnimation = {
     hidden: { opacity: 0, y: 50 },
@@ -18,19 +21,19 @@ const FadeInAnimation = {
     const data = [
       {
         name: 'Stoqs.ai', 
-        icon: '/src/assets/landing-candle.svg', 
+        icon: stoqs.src, 
         offset: 30,
         width: width < smallWidth ? 10 : 17
       },
       {
         name: 'Finchat.io', 
-        icon: '/src/assets/landing-finchat.svg',
+        icon: finchat.src,
         offset: 10,
         width: width < smallWidth ? 19 : 34
       },
       {
         name: 'Perplexity.ai',
-        icon: '/src/assets/landing-perplexity.svg',
+        icon: perplexity.src,
         offset: 0,
         width: width < smallWidth ? 21 : 31
       }
