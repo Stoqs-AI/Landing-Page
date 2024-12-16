@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import React from "react";
+import phone from "../assets/phone.png";
 
 
 const FadeInAnimation = {
@@ -54,7 +55,7 @@ const ThreadSection: React.FC = () => {
         <div className='bg-black w-full h-full'>
           <div className='absolute md:hidden h-[345px] w-full left-0 top-[270px] z-10 bg-gradient-to-t from-black to-transparent'></div>
           <div className='w-[488px] h-[488px] rounded-full bg-black absolute z-10 max-lg:hidden -bottom-[342px] right-[127px] xl:right-[227px] blur-2xl'></div>
-          <img src='/src/assets/phone.png' alt='phone' className='z-0 lg:z-20 absolute mt-12 h-[556px] lg:h-auto max-md:left-1/2 max-md:-translate-x-1/2 md:right-[100px] xl:right-[237px] top-0 lg:top-[72px]' />
+          <img src={phone.src} alt='phone' className='z-0 lg:z-20 absolute mt-12 h-[556px] lg:h-auto max-md:left-1/2 max-md:-translate-x-1/2 md:right-[100px] xl:right-[237px] top-0 lg:top-[72px]' />
         </div>
       </section>
     )
