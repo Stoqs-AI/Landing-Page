@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import React, { useState } from 'react'
 import { ChevronDown } from "lucide-react";
-
+import faqbg from '../assets/faqbg.svg';
 const questions = [
     {
         id: 1,
@@ -147,9 +147,9 @@ const FAQs = () => {
 
   return (
     <>
-        <div className='pt-14 px-4 lg:px-[228px] pb-[77px] text-white'>
+        <div className='pt-14 px-4 lg:px-[228px] pb-[77px] text-white bg-black'>
             <div className='flex justify-between'>
-                <img src="/src/assets/faqbg.svg" alt='bg' className='hidden lg:block absolute w-screen left-0 top-80' />
+                <img src={faqbg.src} alt='bg' className='hidden lg:block absolute w-screen left-0 top-80' />
                 <div className="flex items-center font-noto">
                     <a href='/'>
                         <h1 className="mr-[11px] text-[13px]">S T O Q S</h1>

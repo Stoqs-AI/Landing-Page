@@ -1,6 +1,8 @@
 import React, { useRef, useState } from "react";
 import { GoArrowDownLeft } from "react-icons/go";
 import { Input } from "./ui/input";
+import bg from '../assets/faqbg.svg';
+import candle from '../assets/candle2.svg';
 
 const customPrompts = [
     "How is the market looking today?",
@@ -38,9 +40,9 @@ const Home: React.FC = () => {
             </ul>
         </div>
         <div className='flex mt-14 items-center md:w-[85%] mx-auto flex-col text-center blockgradient rounded-2xl lg:rounded-[32px] py-[77px] relative'>
-          <img src='/src/assets/faqbg.svg' alt='bg' className='absolute -top-24 left-0 w-full h-full' />
+          <img src={bg.src} alt='bg' className='absolute -top-24 left-0 w-full h-full' />
           <div className='flex items-center gap-2'>
-            <img src='/src/assets/candle2.svg' alt='candle' className='h-9 inline-block mr-2' />
+            <img src={candle.src} alt='candle' className='h-9 inline-block mr-2' />
             <p>Introducing Stoqs</p>
           </div>
           <h3 className='text-2xl z-10 md:text-[40px] font-geistthin leading-tight mt-12' style={{

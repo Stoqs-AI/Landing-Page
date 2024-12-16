@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 import advancedAnimation from '../assets/lotties/advanced.json';
 import intermediateAnimation from '../assets/lotties/intermediate.json';
 import beginnerAnimation from '../assets/lotties/beginner.json';
+import candle from '../assets/Candle-lightgrey.svg';
 
 const FadeInAnimation = {
     hidden: { opacity: 0, y: 50 },
@@ -45,7 +46,7 @@ const Intro: React.FC = () => {
     return (
       <section className='pt-12 lg:bg-gradient-to-b from-[#050C10] from-[0.95%] to-black to-[174.69%] flex flex-col items-center justify-center'>
         <p className='text-[#88A2B8] text-xl hidden md:block'>
-          <img src='/src/assets/Candle-lightgrey.svg' alt='candle' className='h-9 inline-block mr-2' />
+          <img src={candle.src} alt='candle' className='h-9 inline-block mr-2' />
           Introducing stoqs
         </p>
         <motion.h4 

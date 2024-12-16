@@ -1,9 +1,10 @@
 import React from "react";
+import ctabg from '../assets/CTA_bg.png';
 
 const CTA: React.FC = () => {
     return (
       <section className=' pt-32 pb-32 px-3 lg:pt-16 lg:pb-40 flex flex-col items-center justify-center text-white' style={{
-        background: 'url(/src/assets/CTA_bg.png)',
+        background: 'url(' + ctabg.src + ')',
       }}>
         <h4 className='text-[1.75rem] lg:text-[40px] font-geistlight textgradient text-center'>We're making market research accessible</h4>
         <p className='font-noto text-[#97A5B7] text-center mt-5'>Why should Wall Street have all the fun? <br />

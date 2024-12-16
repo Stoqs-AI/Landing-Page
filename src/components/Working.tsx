@@ -1,5 +1,11 @@
 import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
+import magnify from "../assets/landing-nextgen/magnify.svg"
+import chart from "../assets/landing-nextgen/chart.svg"
+import barchart from "../assets/landing-nextgen/barchart.svg"
+import linechart from "../assets/landing-nextgen/linechart.svg"
+import network from "../assets/landing-nextgen/network.svg"
+import intelligence from "../assets/Intelligence.svg"
 
 const FadeInAnimation = {
   hidden: { opacity: 0, y: 50 },
@@ -83,27 +89,27 @@ const Working: React.FC = () => {
   
     const iconData = [
       {
-        icon: '/src/assets/landing-nextgen/magnify.svg',
+        icon: magnify,
         angle: offset + 160,
         distance: smallerRadius,
       },
       {
-        icon: '/src/assets/landing-nextgen/network.svg',
+        icon: network,
         angle: offset*1.3 - 20,
         distance: largerRadius,
       },
       {
-        icon: '/src/assets/landing-nextgen/chart.svg',
+        icon: chart,
         angle: offset * 0.8 + 150,
         distance: smallerRadius,
       },
       {
-        icon: '/src/assets/landing-nextgen/linechart.svg',
+        icon: linechart,
         angle: offset + 230,
         distance: smallerRadius,
       },
       {
-        icon: '/src/assets/landing-nextgen/barchart.svg',
+        icon: barchart,
         angle: offset*1.2 + 180,
         distance: largerRadius,
       },
@@ -159,7 +165,7 @@ const Working: React.FC = () => {
           <div key={index} className='absolute w-fit' style={{
             transform: `translate(${CalcPos(startPos, icon.angle, icon.distance).x}px, ${CalcPos(startPos, icon.angle, icon.distance).y}px)`,
           }}>
-            <img src={icon.icon} alt='icon' className={`bg-blur max-md:scale-75 -translate-x-1/2 -translate-y-1/2`} style={{
+            <img src={icon.icon.src} alt='icon' className={`bg-blur max-md:scale-75 -translate-x-1/2 -translate-y-1/2`} style={{
               backdropFilter: 'blur(5px)',
             }} />
           </div>
@@ -181,7 +187,7 @@ const Working: React.FC = () => {
         ))}
         <div className='text-center absolute top-1/2 lg:-translate-y-[40%] max-lg:-translate-y-1/2 left-1/2 -translate-x-1/2 flex flex-col items-center justify-center'>
             <div className='flex gap-3'>
-              <img src='/src/assets/Intelligence.svg' alt='intelligence' className='w-6' />
+              <img src={intelligence.src} alt='intelligence' className='w-6' />
               <motion.p
                 variants={FadeInAnimation}
                 initial='hidden'

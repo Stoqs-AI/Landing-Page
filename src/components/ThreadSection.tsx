@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import React from "react";
 import phone from "../assets/phone.png";
-
+import threadsvg from "../assets/Landing-threads.svg"
 
 const FadeInAnimation = {
     hidden: { opacity: 0, y: 50 },
@@ -13,7 +13,7 @@ const ThreadSection: React.FC = () => {
     return (
       <section className='text-white relative pt-12 px-6 xl:px-[17%] lg:px-[7%] pb-32 md:bg-gradient-to-b from-[#050C10] from-[0.95%] to-black to-[174.69%]'>
         <div className='mt-[500px] max-sm:mx-auto max-sm:w-fit md:mt-0 relative z-30'>
-          <img src="/src/assets/Landing-threads.svg" alt='threads' className='w-20 h-6' />
+          <img src={threadsvg.src} alt='threads' className='w-20 h-6' />
           <motion.p 
             variants={FadeInAnimation}
             initial='hidden'

@@ -1,6 +1,11 @@
 import { motion } from "framer-motion";
 import React from "react";
 import { Bar, BarChart, CartesianGrid, Cell, LabelList, ResponsiveContainer, Tooltip, YAxis } from "recharts";
+import aichat from "../assets/aichat.svg";
+import chartTwo from "../assets/635.png";
+import charts from "../assets/Landing-chartimg.png"
+import secure from "../assets/Landing-secure.png"
+import watchlist from "../assets/Landing-watchlist.png"
 
 const FadeInAnimation = {
     hidden: { opacity: 0, y: 50 },
@@ -104,7 +109,7 @@ const DataInfo: React.FC = () => {
     return (
       <section className='pt-12 mb-20 flex flex-col items-center justify-center text-white'>
         <div className='flex gap-2'>
-          <img src='/src/assets/aichat.svg' alt='aichat' />
+          <img src={aichat.src} alt='aichat' />
           <p className='lg:text-xl text-[#88A2B8]'>Faster and simpler workflows</p>
         </div>
         <motion.h4 
@@ -133,7 +138,7 @@ const DataInfo: React.FC = () => {
           <div className='mx-auto max-lg:w-[90%] flex flex-col lg:flex-row gap-[30px]'>
             <div className='blockgradient lg:flex-1 h-[420px] lg:h-[552px] rounded-[25px] px-5 lg:pl-12 pt-7 lg:py-14'>
               <div className='flex gap-2'>
-                <img src='/src/assets/aichat.svg' alt='aichat' />
+                <img src={aichat.src} alt='aichat' />
                 <p className='text-[#88A2B8] lg:text-xl'>Streamlined investment workflows</p>
               </div>
               <motion.h4
@@ -160,7 +165,7 @@ const DataInfo: React.FC = () => {
             </div>
             <div className='blockgradient overflow-hidden lg:flex-1 relative h-[420px] lg:h-[552px] rounded-[25px] px-7 lg:pl-12 pt-7 lg:py-14 pr-9'>
               <div className='flex gap-2'>
-                <img src='/src/assets/aichat.svg' alt='aichat' />
+                <img src={aichat.src} alt='aichat' />
                 <p className='text-[#88A2B8] lg:text-xl'>Inference and Reasoning</p>
               </div>
               <motion.h4 
@@ -181,7 +186,7 @@ const DataInfo: React.FC = () => {
                   once: true
                 }}
               className='mt-3 max-lg:text-sm font-noto text-[#768394] w-[300px] lg:w-[400px]'>Stoqs does not rely on solely on LLMs for reasoning and inference but use traditional analytical tools.</motion.p>
-              <img src='/src/assets/635.png' alt='chart' className='absolute h-[178px] lg:h-[232px] -bottom-7 lg:bottom-9 left-7 lg:left-14' />
+              <img src={chartTwo.src} alt='chart' className='absolute h-[178px] lg:h-[232px] -bottom-7 lg:bottom-9 left-7 lg:left-14' />
               <div className='absolute w-[260px] right-10 lg:right-14 bottom-28 lg:bottom-36 p-3 lg:p-5 backdrop-blur-md bg-[#FFFFFF01] border border-white rounded-[22px] rounded-br-none'>
                 <p className='text-[11px] lg:text-sm font-noto'>
                   Compare the segment sales for AMD between 2022 and 2023. which segment's sales increased the most proportionally?
@@ -214,7 +219,7 @@ const DataInfo: React.FC = () => {
                   once: true
                 }}
               className='mt-3 max-lg:text-sm font-noto text-[#97A5B7] w-[320px]'>Generative UX delivers accurate, detailed <span className='font-semibold'>in-house charts and graphs</span> without third-party providers</motion.p>
-              <img src='/src/assets/Landing-chartimg.png' alt='charts' className='mt-7 h-[140px]' />
+              <img src={charts.src} alt='charts' className='mt-7 h-[140px]' />
             </div>
             <div className='blockgradient overflow-hidden relative h-[402px] rounded-[25px] pl-6 lg:pl-12 max-lg:pb-8 pt-12 pr-9 lg:flex-1'>
               <motion.h4 
@@ -235,7 +240,7 @@ const DataInfo: React.FC = () => {
                   once: true
                 }}
               className='mt-3 max-lg:text-sm font-noto text-[#97A5B7] w-[280px] lg:w-[320px]'>Trustworthy, <span className='font-semibold'>institutional-grade data</span> from reliable sources — relevant insights over popular ones</motion.p>
-              <img src='/src/assets/Landing-secure.png' alt='trusted' className='mt-7 h-[185px] lg:absolute -bottom-8 right-0' />
+              <img src={secure.src} alt='trusted' className='mt-7 h-[185px] lg:absolute -bottom-8 right-0' />
             </div>
             <div className='blockgradient relative h-[402px] rounded-[25px] pl-6 lg:pl-12 max-lg:pb-8 pt-12 pr-9 lg:flex-1'>
               <motion.h4 
@@ -256,7 +261,7 @@ const DataInfo: React.FC = () => {
                   once: true
                 }}
               className='mt-3 max-lg:text-sm font-noto text-[#97A5B7] w-[280px] lg:w-[320px]'>The watchlist feature lets you extract insights from the stocks you're interested in, just through chat</motion.p>
-              <img src='/src/assets/Landing-watchlist.png' alt='trusted' className='mt-7 h-[185px] absolute bottom-0 left-1/2 -translate-x-1/2' />
+              <img src={watchlist.src} alt='trusted' className='mt-7 h-[185px] absolute bottom-0 left-1/2 -translate-x-1/2' />
             </div>
           </div>
           <div className='max-lg:w-[90%] mx-auto'>
