@@ -32,7 +32,7 @@ const Home: React.FC = () => {
                 BETA
               </span>
             </div>
-            <ul className='hidden lg:flex gap-16 text-[#9BA2A5] font-noto '>
+            <ul className='hidden lg:flex gap-16 text-[#9BA2A5] font-noto z-50'>
               <li><a href="https://eikasialabs.com/blogs/research/" target='_blank'>Research</a></li>
               <li><a href="https://eikasialabs.com" target='_blank'>About</a></li>
               <a href='/faq'>FAQs</a>
@@ -45,7 +45,7 @@ const Home: React.FC = () => {
             <img src={candle.src} alt='candle' className='h-9 inline-block mr-2' />
             <p>Introducing Stoqs</p>
           </div>
-          <h3 className='text-2xl z-10 md:text-[40px] font-geistthin leading-tight mt-12' style={{
+          <h3 className='text-2xl z-10 md:text-[40px] font-geistthin max-sm:font-geistlight leading-tight mt-12' style={{
             background: 'linear-gradient(93deg, #FFF 22.27%, #447299 121.24%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent'
@@ -95,13 +95,14 @@ const Home: React.FC = () => {
             <h6 className='text-base lg:text-[2rem]'>0 Latency</h6>
             <p className='text-[10px] max-md:w-[85px] lg:text-base font-noto text-[#99A9B2] mt-2 md:mt-[10px]'>Live data &lt;=1 min latency</p>
           </div>
-          <div className='text-left lg:text-center w-[198px]'>
-            <h6 className='text-base lg:text-[2rem]'>22+</h6>
-            <p className='text-[10px] max-md:w-[85px] lg:text-base font-noto text-[#99A9B2] mt-2 md:mt-[10px]'>Markets covered</p>
+          <div className='text-left lg:text-center w-[214px]'>
+            <h6 className='text-base lg:text-[2rem]'>5 Markets</h6>
+            <p className='text-[10px] max-md:w-[85px] lg:text-base font-noto text-[#99A9B2] mt-2 md:mt-[10px]'>NYSE, Nasdaq, OTC Markets,
+            BSE and NSE</p>
           </div>
           <div className='text-left lg:text-center w-[198px]'>
-            <h6 className='text-base lg:text-[2rem]'>255+</h6>
-            <p className='text-[10px] max-md:w-[85px] lg:text-base font-noto text-[#99A9B2] mt-2 md:mt-[10px]'>Something about filings</p>
+            <h6 className='text-base lg:text-[2rem]'>15+ Years</h6>
+            <p className='text-[10px] max-md:w-[85px] lg:text-base font-noto text-[#99A9B2] mt-2 md:mt-[10px]'>Historical Market Data</p>
           </div>
         </div>
       </section>

@@ -185,7 +185,7 @@ const DataInfo: React.FC = () => {
                 viewport={{
                   once: true
                 }}
-              className='mt-3 max-lg:text-sm font-noto text-[#768394] w-[300px] lg:w-[400px]'>Stoqs does not rely on solely on LLMs for reasoning and inference but use traditional analytical tools.</motion.p>
+              className='mt-3 max-lg:text-sm font-noto text-[#768394] w-[300px] lg:w-[400px]'>Stoqs does not rely solely on LLMs for reasoning and inference, but also uses traditional analytical tools.</motion.p>
               <img src={chartTwo.src} alt='chart' className='absolute h-[178px] lg:h-[232px] -bottom-7 lg:bottom-9 left-7 lg:left-14' />
               <div className='absolute w-[260px] right-10 lg:right-14 bottom-28 lg:bottom-36 p-3 lg:p-5 backdrop-blur-md bg-[#FFFFFF01] border border-white rounded-[22px] rounded-br-none'>
                 <p className='text-[11px] lg:text-sm font-noto'>

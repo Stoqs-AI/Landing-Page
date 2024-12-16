@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
         <div className='text-[#A6B8C2] font-noto text-lg flex flex-col lg:flex-row lg:items-center justify-between'>
           <ul className='flex flex-col gap-10 lg:gap-0 lg:flex-row w-[220px] lg:justify-between'>
             <li>About</li>
-            <li>Contact us</li>
+            <li><a href="mailto:hello@stoqs.ai">Contact us</a></li>
           </ul>
           <ul className='flex mt-10 gap-10 flex-col lg:flex-row lg:gap-16'>
             <li>Terms & Conditions</li>

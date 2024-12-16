@@ -44,7 +44,7 @@ const Intro: React.FC = () => {
     const { width, height } = useWindowDimensions();
     const [mode, setMode] = useState('Beginner');
     return (
-      <section className='pt-12 lg:bg-gradient-to-b from-[#050C10] from-[0.95%] to-black to-[174.69%] flex flex-col items-center justify-center'>
+      <section className='pt-12 overflow-hidden lg:bg-gradient-to-b from-[#050C10] from-[0.95%] to-black to-[174.69%] flex flex-col items-center justify-center'>
         <p className='text-[#88A2B8] text-xl hidden md:block'>
           <img src={candle.src} alt='candle' className='h-9 inline-block mr-2' />
           Introducing stoqs
@@ -70,12 +70,12 @@ const Intro: React.FC = () => {
           }}
         className='text-[#97A5B7] w-[340px] md:w-[550px] font-noto text-center mt-7'>Market research has never been easier.<br />Get tailored data and insights with just a conversation.</motion.p>
         <div className='relative'>
-          <ul className='mt-11 flex gap-10'>
+          <ul className='mt-11 flex gap-10 text-xl'>
             <li className={`${mode == "Beginner" ? "text-white" : "text-[#A3A9B1]"} cursor-pointer`} onClick={() => setMode("Beginner")}>Beginner</li>
             <li className={`${mode == "Intermediate" ? "text-white" : "text-[#A3A9B1]"} cursor-pointer`} onClick={() => setMode("Intermediate")}>Intermediate</li>
             <li className={`${mode == "Advanced" ? "text-white" : "text-[#A3A9B1]"} cursor-pointer`} onClick={() => setMode("Advanced")}>Advanced</li>
           </ul>
-          <div className={`bg-[#20ADCC] w-16 h-[2px] transition absolute left-0 ${mode === "Beginner" ? 'w-16 -translate-x-0' : mode === "Intermediate" ? 'w-[82px] translate-x-28' : 'w-20 translate-x-60'}`}></div>
+          <div className={`bg-[#20ADCC] w-16 h-[2px] transition absolute left-1 ${mode === "Beginner" ? 'w-16 -translate-x-0' : mode === "Intermediate" ? 'w-[82px] translate-x-32' : 'w-20 translate-x-[272px]'}`}></div>
         </div>
         <div className='w-11/12 md:min-w-[765px] relative md:w-10/12  h-[620px] mt-7 mb-20 flex flex-col lg:flex-row lg:justify-between px-7 lg:pr-14 lg:pl-28 pt-8 lg:pt-32 pb-8 rounded-[32px] bg-gradient-to-b from-[#111D28] from-[2.27%] to-[#091015] to-[105.73%]'>
           <div>
