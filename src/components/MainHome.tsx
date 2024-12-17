@@ -1,8 +1,9 @@
 import React, { useRef, useState } from "react";
 import { GoArrowDownLeft } from "react-icons/go";
 import { Input } from "./ui/input";
-import bg from '../assets/faqbg.svg';
+import bg from '../assets/bg.png';
 import candle from '../assets/candle2.svg';
+import { AlignJustify, X } from "lucide-react";
 
 const customPrompts = [
     "How is the market looking today?",
@@ -13,6 +14,7 @@ const customPrompts = [
 const Home: React.FC = () => {
     const [initialPrompt, setInitialPrompt] = useState("");
     const [placeholder, setPlaceholder] = useState("“Top performing stocks today” ?");
+    const [navOpen, setNavOpen] = useState(false);
   
     const inputRef = useRef<HTMLInputElement>(null);
     const promptCardsRef = useRef<HTMLDivElement>(null);
@@ -25,22 +27,48 @@ const Home: React.FC = () => {
       <section className='pt-14 px-4 min-[1600px]:px-[204px] pb-[77px] bg-black text-white'>
         <div className='flex justify-between lg:px-[205px] min-[1600px]:px-0'>
           <div className="flex items-center font-noto">
-              <a href="/">
-                <h1 className="mr-[11px] text-[13px]">S T O Q S</h1>
-              </a>
-              <span className="grid px-3 place-content-center rounded-full text-center tracking-normal text-[12px] font-semibold border-2 text-[#2493C2]/30 border-[#2493C2]/30">
-                BETA
-              </span>
+            <a href="/">
+              <h1 className="mr-[11px] text-[13px]">S T O Q S</h1>
+            </a>
+            <span className="grid px-3 place-content-center rounded-full text-center tracking-normal text-[12px] font-semibold border-2 text-[#2493C2]/30 border-[#2493C2]/30">
+              BETA
+            </span>
+          </div>
+          <ul className='hidden lg:flex gap-16 text-[#9BA2A5] font-noto z-50'>
+            <li><a href="https://eikasialabs.com/blogs/research/" target='_blank'>Research</a></li>
+            <li><a href="https://eikasialabs.com" target='_blank'>About</a></li>
+            <a href='/faq'>FAQs</a>
+            <li className='text-[#139AC5]'>Try Stoqs</li>
+          </ul>
+          <div className="lg:hidden cursor-pointer" onClick={() => setNavOpen(true)}>
+            <AlignJustify width={32} />
+          </div>
+        </div>
+        <div>
+        <div className={`${navOpen ? 'block' : 'hidden'} lg:hidden fixed top-0 left-0 w-screen h-screen bg-gradient-to-b from-[#061017] from-[0.95%] to-black to-[174.69%] z-50 font-noto px-5 py-8`}>
+            <div className="flex h-fit justify-between">
+              <div className="flex">
+                <a href="/">
+                  <h1 className="mr-[11px] text-[13px]">S T O Q S</h1>
+                </a>
+                <span className="grid px-3 place-content-center rounded-full text-center tracking-normal text-[12px] font-semibold border-2 text-[#2493C2]/30 border-[#2493C2]/30">
+                  BETA
+                </span>
+              </div>
+              <div className="lg:hidden cursor-pointer" onClick={() => setNavOpen(false)}>
+                <X width={32} />
+              </div>
             </div>
-            <ul className='hidden lg:flex gap-16 text-[#9BA2A5] font-noto z-50'>
+            <ul className='text-[#9BA2A5] font-noto flex flex-col gap-14 w-full h-full justify-center items-center'>
               <li><a href="https://eikasialabs.com/blogs/research/" target='_blank'>Research</a></li>
               <li><a href="https://eikasialabs.com" target='_blank'>About</a></li>
-              <a href='/faq'>FAQs</a>
+              <li><a href='/faq'>FAQs</a></li>
               <li className='text-[#139AC5]'>Try Stoqs</li>
             </ul>
+          </div>
         </div>
-        <div className='flex mt-14 items-center md:w-[85%] mx-auto flex-col text-center blockgradient rounded-2xl lg:rounded-[32px] py-[77px] relative'>
-          <img src={bg.src} alt='bg' className='absolute -top-24 left-0 w-full h-full' />
+        <div className='flex mt-14 overflow-hidden items-center md:w-[85%] mx-auto flex-col text-center blockgradient rounded-2xl lg:rounded-[32px] py-[77px] relative'>
+          <img src={bg.src} alt='bg' className='absolute max-sm:opacity-35 left-1/2 -translate-x-1/2 w-[80%] min-w-[600px]' />
           <div className='flex items-center gap-2'>
             <img src={candle.src} alt='candle' className='h-9 inline-block mr-2' />
             <p>Introducing Stoqs</p>

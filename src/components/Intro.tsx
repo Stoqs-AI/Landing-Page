@@ -44,7 +44,7 @@ const Intro: React.FC = () => {
     const { width, height } = useWindowDimensions();
     const [mode, setMode] = useState('Beginner');
     return (
-      <section className='pt-12 overflow-hidden lg:bg-gradient-to-b from-[#050C10] from-[0.95%] to-black to-[174.69%] flex flex-col items-center justify-center'>
+      <section className='pt-12 bg-black overflow-hidden lg:bg-gradient-to-b from-[#050C10] from-[0.95%] to-black to-[174.69%] flex flex-col items-center justify-center'>
         <p className='text-[#88A2B8] text-xl hidden md:block'>
           <img src={candle.src} alt='candle' className='h-9 inline-block mr-2' />
           Introducing stoqs

@@ -11,7 +11,7 @@ const FadeInAnimation = {
 
 const ThreadSection: React.FC = () => {
     return (
-      <section className='text-white relative pt-12 px-6 xl:px-[17%] lg:px-[7%] pb-32 md:bg-gradient-to-b from-[#050C10] from-[0.95%] to-black to-[174.69%]'>
+      <section className='text-white relative pt-12 px-6 xl:px-[17%] lg:px-[7%] pb-32 md:bg-gradient-to-b from-[#050C10] from-[3.23%] to-black to-[105.38%]'>
         <div className='mt-[500px] max-sm:mx-auto max-sm:w-fit md:mt-0 relative z-30'>
           <img src={threadsvg.src} alt='threads' className='w-20 h-6' />
           <motion.p 
