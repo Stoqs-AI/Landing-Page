@@ -57,7 +57,7 @@ const Intro: React.FC = () => {
           viewport={{
             once: true
           }}
-        className='text-2xl md:text-[2.7rem] lg:w-[907px] text-center font-geistlight textgradient leading-tight mt-8'>
+        className='text-2xl md:text-[2.7rem] w-[325px] lg:w-[907px] text-center font-geistlight textgradient leading-tight mt-8'>
           A financial analyst that’s made for you
         </motion.h4>
         <motion.p

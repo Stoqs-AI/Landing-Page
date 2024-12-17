@@ -41,7 +41,7 @@ const FadeInAnimation = {
     return (
       <g>
         <image x={width < smallWidth ? x+width/2-40+data[index].offset/2 : x+width/2-70+data[index].offset} y={width < smallWidth ? y+height-45: y+height-49} href={data[index].icon} width={data[index].width}/>
-        <text x={x + width / 2 + 10} y={y+height-30} fill="#fff" textAnchor="middle" dominantBaseline="middle" fontSize={width < smallWidth ? 10 : 15} fontFamily='Geist-Regular'>
+        <text x={x + width / 2 + 10} y={y+height-30} fill="#fff" textAnchor="middle" dominantBaseline="middle" fontSize={width < smallWidth ? 9 : 15} fontFamily='Geist-Regular'>
           {data[index].name}
         </text>
       </g>

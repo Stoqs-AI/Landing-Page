@@ -196,7 +196,7 @@ const Working: React.FC = () => {
                 viewport={{
                   once: true
                 }}
-              className='text-[#88A2B8]'>Next generation capabilities</motion.p>
+              className='text-[#88A2B8] text-xl'>Next generation capabilities</motion.p>
             </div>
             <motion.h4 
               variants={FadeInAnimation}

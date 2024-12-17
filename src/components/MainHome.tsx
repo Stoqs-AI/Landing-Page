@@ -91,14 +91,14 @@ const Home: React.FC = () => {
             >
               {customPrompts.map((prompt, index) => (
                 <div
-                className={`cursor-pointer ${index === 2 ? 'min-w-[250px]' : 'min-w-[196px]'} flex text-[#CCCCCC] justify-between gap-2 rounded-xl border p-3 pb-4 border-customprompts-bordercolor`}
+                className={`cursor-pointer font-noto ${index === 2 ? 'min-w-[270px]' : index === 1 ? 'min-w-[216px]' : 'min-w-[196px]'} flex text-[#CCCCCC] justify-between gap-2 rounded-xl border p-3 pb-4 border-customprompts-bordercolor`}
                 onClick={() => {
                   setInitialPrompt(prompt);
                   handleSubmit(prompt);
                 }}
                 tabIndex={0}
               >
-                <div className={`text-[12px] ${index === 2 ? 'w-[250px]' : index === 1 ? 'w-[142px] md:w-[150px]' : 'w-[111px]'}`}>{prompt}</div>
+                <div className={`text-sm ${index === 2 ? 'w-[270px]' : index === 1 ? 'w-[150px]' : 'w-[121px]'}`}>{prompt}</div>
                 <GoArrowDownLeft color="#808080" className="w-5 h-5 shrink-0" />
               </div>
               ))}
