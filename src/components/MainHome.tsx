@@ -20,7 +20,11 @@ const Home: React.FC = () => {
     const promptCardsRef = useRef<HTMLDivElement>(null);
   
     const handleSubmit = async (prompt: string) => {
-      console.log("SUBMITTED");
+      const encodedData = btoa(prompt);
+      console.log(encodedData);
+      
+      const targetUrl = 'https://app.stoqs.ai/?prompt=' + encodedData;
+      window.open(targetUrl, '_blank');
     };
     
     return (
