@@ -84,7 +84,8 @@ const Home: React.FC = () => {
           }}
           >Market insights with<br />natural language</h3>
           <p className='text-white/60 text-sm md:text-base font-noto mt-4'>Start by asking anything</p>
-          <div className="relative px-3 md:px-28 lg:px-28 xl:px-[255px] group w-full max-md:focus-within:px-4 max-md:focus-within:fixed max-md:focus-within:left-0 max-md:focus-within:top-0 max-md:focus-within:h-[100svh] max-md:focus-within:w-[100vw] max-md:focus-within:z-10 max-md:focus-within:backdrop-blur max-md:focus-within:bg-black/80 max-md:focus-within:flex max-md:focus-within:items-center max-md:focus-within:justify-end max-md:focus-within:flex-col">
+          <div className="relative group px-3 md:px-28 lg:px-28 xl:px-[255px] group w-full max-md:focus-within:px-4 max-md:focus-within:fixed max-md:focus-within:left-0 max-md:focus-within:top-0 max-md:focus-within:h-[100svh] max-md:focus-within:w-[100vw] max-md:focus-within:z-10 max-md:focus-within:backdrop-blur max-md:focus-within:bg-black/80 max-md:focus-within:flex max-md:focus-within:items-center max-md:focus-within:justify-end max-md:focus-within:flex-col">
+            <X width={32} className="absolute top-9 right-9 md:hidden hidden group-focus-within:block" />
             <div
               ref={promptCardsRef}
               className="flex text-left no-scrollbar max-md:group-focus-within:flex-col w-full gap-3 mt-8 overflow-auto z-50 -ml-[50%] translate-x-1/2 max-md:group-focus-within:ml-0 max-md:group-focus-within:translate-x-0"

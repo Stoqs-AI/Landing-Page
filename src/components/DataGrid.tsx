@@ -269,7 +269,7 @@ const DataInfo: React.FC = () => {
           </div>
           <div className='max-lg:w-[90%] mx-auto'>
             <div className='blockgradient bactive lg:px-12 pt-14 pb-5 rounded-3xl border border-[#81B5DA] flex flex-col lg:flex-row gap-24 mt-6'>
-              <div className='mt-14 px-12'>
+              <div className='md:mt-14 px-12'>
                 <motion.h4 
                   variants={FadeInAnimation}
                   initial='hidden'
