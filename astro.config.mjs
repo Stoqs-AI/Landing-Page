@@ -7,7 +7,6 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
-  base: '/Landing-Page/',
   vite: {
     assetsInclude: ["**/*.riv"],
   },
