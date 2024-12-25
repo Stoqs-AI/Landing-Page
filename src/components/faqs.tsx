@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import React, { useState } from 'react'
-import { ChevronDown } from "lucide-react";
+import { AlignJustify, ChevronDown, X } from "lucide-react";
 import faqbg from '../assets/faqbg.svg';
 const questions = [
     {
@@ -144,10 +144,11 @@ export const FAQComponent: React.FC<FAQComponentProps> = (props) => {
 
 const FAQs = () => {
     const [activeQuestion, setActiveQuestion] = useState<number | null>(null);
+    const [navOpen, setNavOpen] = useState(false);
 
   return (
     <>
-        <div className='pt-14 px-4 lg:px-[228px] pb-[77px] text-white bg-black'>
+        <div className='pt-7 px-4 lg:px-[228px] pb-[77px] text-white bg-black'>
             <div className='flex justify-between'>
                 <img src={faqbg.src} alt='bg' className='hidden lg:block absolute w-screen left-0 top-80' />
                 <div className="flex items-center font-noto">
@@ -162,9 +163,35 @@ const FAQs = () => {
                     <li><a href="https://eikasialabs.com/blogs/research/" target='_blank'>Research</a></li>
                     <li><a href="https://eikasialabs.com" target='_blank'>About</a></li>
                     <a href='/faq' target='_blank'>FAQs</a>
-                    <li className='text-[#139AC5]'>Try Stoqs</li>
+                    <li className='text-[#139AC5]'><a href="https://app.stoqs.ai" target='_blank'>Try Stoqs</a></li>
                 </ul>
+                <div className="lg:hidden cursor-pointer" onClick={() => setNavOpen(true)}>
+                    <AlignJustify width={32} />
+                </div>
             </div>
+            <div>
+                <div className={`${navOpen ? 'block' : 'hidden'} lg:hidden fixed top-0 left-0 w-screen h-screen bg-gradient-to-b from-[#061017] from-[0.95%] to-black to-[174.69%] z-50 font-noto px-4 py-7`}>
+                    <div className="flex h-fit items-center justify-between">
+                    <div className="flex">
+                        <a href="/">
+                        <h1 className="mr-[11px] text-[13px]">S T O Q S</h1>
+                        </a>
+                        <span className="grid px-3 place-content-center rounded-full text-center tracking-normal text-[12px] font-semibold border-2 text-[#2493C2]/30 border-[#2493C2]/30">
+                        BETA
+                        </span>
+                    </div>
+                    <div className="lg:hidden cursor-pointer" onClick={() => setNavOpen(false)}>
+                        <X width={32} />
+                    </div>
+                    </div>
+                    <ul className='text-[#9BA2A5] font-noto flex flex-col gap-14 w-full h-full justify-center items-center'>
+                        <li><a href="https://eikasialabs.com/blogs/research/" target='_blank'>Research</a></li>
+                        <li><a href="https://eikasialabs.com" target='_blank'>About</a></li>
+                        <li><a href='/faq'>FAQs</a></li>
+                        <li className='text-[#139AC5]'><a href="https://app.stoqs.ai" target='_blank'>Try Stoqs</a></li>
+                    </ul>
+                </div>
+                </div>
             <div className='flex flex-col items-center mt-32 font-geistregular'>
                 <h3 className='text-[1.75rem] lg:text-[43px] leading-tight textgradient text-center'>Some questions you might have?</h3>
                 <p className='text-center w-[261px] lg:w-[546px] font-noto text-[#97A5B7] mt-5 text-sm md:text-lg'>Here are some frequently asked questions. <br />

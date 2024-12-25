@@ -42,14 +42,14 @@ const Home: React.FC = () => {
             <li><a href="https://eikasialabs.com/blogs/research/" target='_blank'>Research</a></li>
             <li><a href="https://eikasialabs.com" target='_blank'>About</a></li>
             <a href='/faq'>FAQs</a>
-            <li className='text-[#139AC5]'>Try Stoqs</li>
+            <li className='text-[#139AC5]'><a href="https://app.stoqs.ai" target='_blank'>Try Stoqs</a></li>
           </ul>
           <div className="lg:hidden cursor-pointer" onClick={() => setNavOpen(true)}>
             <AlignJustify width={32} />
           </div>
         </div>
         <div>
-        <div className={`${navOpen ? 'block' : 'hidden'} lg:hidden fixed top-0 left-0 w-screen h-screen bg-gradient-to-b from-[#061017] from-[0.95%] to-black to-[174.69%] z-50 font-noto px-4 py-7`}>
+          <div className={`${navOpen ? 'block' : 'hidden'} lg:hidden fixed top-0 left-0 w-screen h-screen bg-gradient-to-b from-[#061017] from-[0.95%] to-black to-[174.69%] z-50 font-noto px-4 py-7`}>
             <div className="flex h-fit items-center justify-between">
               <div className="flex">
                 <a href="/">
@@ -67,7 +67,7 @@ const Home: React.FC = () => {
               <li><a href="https://eikasialabs.com/blogs/research/" target='_blank'>Research</a></li>
               <li><a href="https://eikasialabs.com" target='_blank'>About</a></li>
               <li><a href='/faq'>FAQs</a></li>
-              <li className='text-[#139AC5]'>Try Stoqs</li>
+              <li className='text-[#139AC5]'><a href="https://app.stoqs.ai" target='_blank'>Try Stoqs</a></li>
             </ul>
           </div>
         </div>
