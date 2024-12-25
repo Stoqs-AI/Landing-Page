@@ -28,7 +28,7 @@ const Home: React.FC = () => {
     };
     
     return (
-      <section className='pt-14 px-4 min-[1600px]:px-[204px] pb-[77px] bg-black text-white'>
+      <section className='pt-7 px-4 min-[1600px]:px-[204px] pb-[77px] bg-black text-white'>
         <div className='flex justify-between lg:px-[205px] min-[1600px]:px-0'>
           <div className="flex items-center font-noto">
             <a href="/">
@@ -49,11 +49,11 @@ const Home: React.FC = () => {
           </div>
         </div>
         <div>
-        <div className={`${navOpen ? 'block' : 'hidden'} lg:hidden fixed top-0 left-0 w-screen h-screen bg-gradient-to-b from-[#061017] from-[0.95%] to-black to-[174.69%] z-50 font-noto px-5 py-8`}>
+        <div className={`${navOpen ? 'block' : 'hidden'} lg:hidden fixed top-0 left-0 w-screen h-screen bg-gradient-to-b from-[#061017] from-[0.95%] to-black to-[174.69%] z-50 font-noto px-4 py-8`}>
             <div className="flex h-fit justify-between">
               <div className="flex">
                 <a href="/">
-                  <h1 className="mr-[11px] text-[13px]">S T O Q S</h1>
+                  <h1 className="mr-4 text-[13px]">S T O Q S</h1>
                 </a>
                 <span className="grid px-3 place-content-center rounded-full text-center tracking-normal text-[12px] font-semibold border-2 text-[#2493C2]/30 border-[#2493C2]/30">
                   BETA
