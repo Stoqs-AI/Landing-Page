@@ -49,11 +49,11 @@ const Home: React.FC = () => {
           </div>
         </div>
         <div>
-        <div className={`${navOpen ? 'block' : 'hidden'} lg:hidden fixed top-0 left-0 w-screen h-screen bg-gradient-to-b from-[#061017] from-[0.95%] to-black to-[174.69%] z-50 font-noto px-4 py-8`}>
-            <div className="flex h-fit justify-between">
+        <div className={`${navOpen ? 'block' : 'hidden'} lg:hidden fixed top-0 left-0 w-screen h-screen bg-gradient-to-b from-[#061017] from-[0.95%] to-black to-[174.69%] z-50 font-noto px-4 py-7`}>
+            <div className="flex h-fit items-center justify-between">
               <div className="flex">
                 <a href="/">
-                  <h1 className="mr-4 text-[13px]">S T O Q S</h1>
+                  <h1 className="mr-[11px] text-[13px]">S T O Q S</h1>
                 </a>
                 <span className="grid px-3 place-content-center rounded-full text-center tracking-normal text-[12px] font-semibold border-2 text-[#2493C2]/30 border-[#2493C2]/30">
                   BETA
