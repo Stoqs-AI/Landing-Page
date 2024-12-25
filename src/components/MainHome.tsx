@@ -7,8 +7,8 @@ import { AlignJustify, X } from "lucide-react";
 
 const customPrompts = [
     "How is the market looking today?",
-    "“What are the revenue segments for Apple?”",
-    "“Compare the performance of Tesla and Ford over past month ”",
+    "What are the revenue segments for Apple?",
+    "Compare the performance of Tesla and Ford over past month ",
   ];
 
 const Home: React.FC = () => {
