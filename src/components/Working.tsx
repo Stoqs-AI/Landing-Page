@@ -217,7 +217,7 @@ const Working: React.FC = () => {
               }}
             className='w-[261px] lg:w-[546px] font-noto text-[#97A5B7] mt-5 text-sm md:text-lg'>Using a unique query decomposition strategy, a host of live data sources, AI agents and retrieval augmented generation (RAG), Stoqs generates insights that you might typically see from actual financial analysts. 
             Now, you too can get the inside scoop.</motion.p>
-            <p className='text-sm md:text-lg text-[#27A1D5] mt-[60px]'>Learn how Stoqs works</p>
+            <a href='https://eikasialabs.com/blogs/research/' target="_blank"><p className='text-sm md:text-lg text-[#27A1D5] mt-[60px]'>Learn how Stoqs works</p></a>
         </div>
       </section>
     )

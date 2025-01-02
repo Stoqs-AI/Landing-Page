@@ -35,9 +35,9 @@ const ThreadSection: React.FC = () => {
             viewport={{
               once: true
             }}
-          className='text-[1.75rem] lg:text-[43px] w-[330px] lg:w-[657px] leading-tight textgradient mt-8'>Threads.<span className='font-geistlight'>Your window to deep and comprehensive research</span></motion.h3>
+          className='text-[1.75rem] lg:text-[43px] w-[330px] lg:w-[637px] leading-tight textgradient mt-8'>Threads.<span className='font-geistlight'>Your window to deep and comprehensive research</span></motion.h3>
           <p className='text-[#768394] font-noto w-[340px] lg:w-[497px] mt-4 lg:mt-7'>
-            Too many options to explore? Explore them all.
+            Too many options to explore? Explore them all. <br />
             With threads, you can research multiple stocks and news.
           </p>
           <motion.p 

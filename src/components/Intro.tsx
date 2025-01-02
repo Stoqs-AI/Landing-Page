@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import Lottie from "lottie-react";
+import Lottie, { useLottie, useLottieInteractivity } from "lottie-react";
 import { ArrowRight } from "lucide-react";
 import React, { useEffect, useState } from "react";
 import advancedAnimation from '../assets/lotties/advanced.json';
@@ -40,6 +40,35 @@ const FadeInAnimation = {
       return windowDimensions;
     }
 
+const BeginnerLottie = () => {
+  const { width } = useWindowDimensions();
+  const beginnerLottieOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: beginnerAnimation,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  }
+  const lottieStyles = {
+    width: width > 1275 ? '100%' : width > 1024 ? '450px' : width > 770 ? '550px' : '450px'
+  }
+  const beginnerLottieObj = useLottie(beginnerLottieOptions, lottieStyles);
+
+  const Animation = useLottieInteractivity({
+    lottieObj: beginnerLottieObj,
+    mode: 'scroll',
+    actions: [
+      {
+        visibility: [0.4, 1],
+        type: 'play',
+        frames: [0, 190]
+      },
+    ],
+  })
+
+  return Animation;
+}
 const Intro: React.FC = () => {
     const { width, height } = useWindowDimensions();
     const [mode, setMode] = useState('Beginner');
@@ -99,7 +128,8 @@ const Intro: React.FC = () => {
                 once: true
               }}
             className='text-[#97A5B7] text-sm md:text-base w-[270px] lg:w-[360px] mt-7'>Data you can interact with in a conversational style, providing insights that help you understand it better.</motion.p>
-            <motion.p
+            <a href="https://app.stoqs.ai/" target='_blank'>
+              <motion.p
               variants={FadeInAnimation}
               initial='hidden'
               whileInView='visible'
@@ -109,11 +139,12 @@ const Intro: React.FC = () => {
               }}
             className='text-[#4DBDED] mt-6 lg:mt-24 flex gap-1'>Get started with simple queries <span className='-rotate-45'>
             <ArrowRight />
-          </span></motion.p>
+          </span></motion.p></a>
           </div>
           { mode == "Beginner" && (
             <div className='mt-3 lg:-mt-16 absolute right-0 bottom-0 md:bottom-1/2 md:translate-y-1/2 max-md:right-1/2 max-md:translate-x-1/2'>
-            <Lottie animationData={beginnerAnimation} style={{width: width > 1275 ? '100%' : width > 1024 ? '450px' : width > 770 ? '550px' : '450px'}} />
+            {/* <Lottie animationData={beginnerAnimation} style={{width: width > 1275 ? '100%' : width > 1024 ? '450px' : width > 770 ? '550px' : '450px'}} /> */}
+            <BeginnerLottie />
           </div>
           )}
           {

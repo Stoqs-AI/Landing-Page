@@ -85,7 +85,7 @@ const Home: React.FC = () => {
           >Market insights with<br />natural language</h3>
           <p className='text-white/60 text-sm md:text-base font-noto mt-4'>Start by asking anything</p>
           <div className="relative group px-3 md:px-28 lg:px-28 xl:px-[255px] group w-full max-md:focus-within:px-4 max-md:focus-within:fixed max-md:focus-within:left-0 max-md:focus-within:top-0 max-md:focus-within:h-[100svh] max-md:focus-within:w-[100vw] max-md:focus-within:z-10 max-md:focus-within:backdrop-blur max-md:focus-within:bg-black/80 max-md:focus-within:flex max-md:focus-within:items-center max-md:focus-within:justify-end max-md:focus-within:flex-col">
-            <X width={32} className="absolute top-9 right-9 md:hidden hidden group-focus-within:block" />
+            <X width={32} className="absolute top-9 right-9 md:hidden hidden max-sm:group-focus-within:block" />
             <div
               ref={promptCardsRef}
               className="flex text-left no-scrollbar max-md:group-focus-within:flex-col w-full gap-3 mt-8 overflow-auto z-50 -ml-[50%] translate-x-1/2 max-md:group-focus-within:ml-0 max-md:group-focus-within:translate-x-0"
@@ -113,7 +113,7 @@ const Home: React.FC = () => {
             >
               <input
                 ref={inputRef}
-                className="border-[#3AA9CC] max-md:focus:mb-4 bg-[#14181A] outline-[#87D6F5] rounded-xl transition-[height] text-sm resize-none w-full px-2 py-2 h-12 md:h-[49px] bgshadow placeholder:text-white/40"
+                className="border-[#3AA9CC] max-md:focus:mb-4 bg-[#14181A] focus-within:outline-[#3EC9DC] outline-none rounded-xl transition-[height] text-sm resize-none w-full px-2 py-2 h-12 md:h-[49px] bgshadow placeholder:text-white/40"
                 placeholder={placeholder}
                 value={initialPrompt}
                 onChange={(e) => setInitialPrompt(e.target.value)}

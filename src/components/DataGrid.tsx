@@ -20,19 +20,19 @@ const FadeInAnimation = {
     const smallWidth = 130;
     const data = [
       {
-        name: 'Stoqs.ai', 
+        name: 'Stoqs', 
         icon: stoqs.src, 
         offset: 30,
         width: width < smallWidth ? 10 : 17
       },
       {
-        name: 'Finchat.io', 
+        name: 'Finchat', 
         icon: finchat.src,
         offset: 10,
         width: width < smallWidth ? 19 : 34
       },
       {
-        name: 'Perplexity.ai',
+        name: 'Perplexity',
         icon: perplexity.src,
         offset: 0,
         width: width < smallWidth ? 21 : 31
@@ -40,7 +40,7 @@ const FadeInAnimation = {
     ]
     return (
       <g>
-        <image x={width < smallWidth ? x+width/2-40+data[index].offset/2 : x+width/2-70+data[index].offset} y={width < smallWidth ? y+height-45: y+height-49} href={data[index].icon} width={data[index].width}/>
+        <image x={width < smallWidth ? x+width/2-35+data[index].offset/2 : x+width/2-60+data[index].offset} y={width < smallWidth ? y+height-45: y+height-49} href={data[index].icon} width={data[index].width}/>
         <text x={x + width / 2 + 10} y={y+height-30} fill="#fff" textAnchor="middle" dominantBaseline="middle" fontSize={width < smallWidth ? 9 : 15} fontFamily='Geist-Regular'>
           {data[index].name}
         </text>
